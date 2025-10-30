@@ -13,7 +13,8 @@ function sayHello() {
 }
 
 // NB for me : gunanya function adalah untuk memanggil sebuah kode atau blueprint yg telah kita buat
-// console time, console info, console timelog, console timeend itu gunanya untuk melihat berapa lama sintask itu di jalankan
+// console time, console info, console timeend itu gunanya untuk melihat berapa lama sintask itu di jalankan
+// console timelog adalah untuk memunculkan console time 
 // console count adalah untuk melihat berapa kali sintask itu di jalankan
 // console log adalah untuk menampilkan apa yg di isi di dlm conole log
 // alret adalah untuk menampilkan kotak pesan (popup) 
