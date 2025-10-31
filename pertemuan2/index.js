@@ -1,5 +1,19 @@
 let nama = "BAMBANG";
 
+// variable adalah sebuah tempat untuk menempatkan data dan memiliki 3 jenis yaitu let , var , const
+// type data variable ada 5 yaitu String ("") , integer (1,2,3,4,5), boolean(true,false), null (), undifined
+// aritmarika ad 5 + 1 yaitu pertambahan (+), pengutangan (-), perkalian (*) , pembagian (/) , modulus (%), perpangkatan (**)
+// kalau ingin ngelihant type data di dlm sebuah variable itu menggunakan (typeof) contoh console.log(typeof a)
+// parsefloat itu gunanaya untuk type data integer untuk memiliki koma/titik contoh (50 -> 50.0)
+// com Number bisa di ganti dgn + untuk mebgubah type data 
+// Perbandingan itu ada 8 yaitu  ((>) =lebih besar dari ) ((<) = lebih kecil dari) ((==) = sama dengan)((!=) = tidak sama dgn)
+// ((>=) = lebih besar, sama dengan), ((<=) = lebih kecil, sama dengan),
+// ((===) = sama dengan & tipe sama dan akam menghasilkan true jika sama dan akan menghasilkan false jika beda)
+// ((!==) = tidak sama & tipe berbeda dan akan menghasilkan true jika beda dan jika sama maka akan false)
+// (&&) hanya true apabila ke 2 kondisi sma2 true dan sebaliknnya jk slah 1 kondisi false maka yg muncul akan menjadi false
+// ( || ) bisa  true apabila salah satu kondisi true  dan akan false ketika ke duanya false
+// ( ! ) dia membalikkan fakta 
+
 
 // String
 let namaVar = "Ini Value String";
