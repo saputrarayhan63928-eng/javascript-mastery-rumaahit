@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1{
+            display: flex;
+            justify-content: center;
+        }
+        .btn1{
+            padding: 10px;
+            font-weight: bold;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <button class="btn1" onclick="pilihhari()">Pilih hari</button>
+    </div>
+</body>
+<script>
+    function pilihhari(){
+       if( confirm("Apakah Kamu ingin lihat tugas perhari")){
+         let b = prompt("Pilih hari: \n 1. Senin \n 2. Selasa \n 3. Rabu \n 4. Kamis \n 5. Jum'at \n 6. Sabtu \n 7. Ahad")
+         switch(b){
+            case("1"):
+            alert("Hari senin itu belajar")
+            console.log("Hari Senin");
+            break;
+               case("2"):
+            alert("Hari Selasa itu belajar")
+            console.log("Hari Selasa");
+            break;
+               case("3"):
+            alert("Hari Rabu itu belajar")
+            console.log("Hari Rabu");
+            break;
+               case("4"):
+            alert("Hari Kamis itu belajar")
+            console.log("Hari kamis");
+            break;
+               case("5"):
+            alert("Hari jum'at itu belajar")
+            console.log("Hari jum'at");
+            break;
+               case("6"):
+            alert("Hari Sabtu itu belajar")
+            console.log("Hari Sabtu");
+            break;
+               case("7"):
+            alert("Hari Ahad itu LIBUR")
+            console.log("Hari Ahad 'Hari LIBUR' ");
+            break;
+            default:
+                alert("Tolong masukkan hari yg benar!!!!")
+                break
+         }
+       }
+       else{
+        alert("OWH y udh")
+       }
+    }
+</script>
+</html>

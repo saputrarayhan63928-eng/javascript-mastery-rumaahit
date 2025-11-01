@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1{
+            display: flex;
+            justify-content: center;
+        }
+        .btn1{
+            padding: 10px;
+            font-weight: bold;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <button class="btn1" onclick="loop()">Lakukan Loop</button>
+    </div>
+</body>
+<script>
+ 
+ function loop(){
+    if(confirm("apakah kamu mau melakukan loop 1 - 10")){
+    for   (let a = 1  ; a <= 10; a++)  {
+    console.log("Pengulangan ke " + a)
+}   
+alert("Loop sudah terjadi silahkan lihat di console")
+    }
+    else{
+        alert("y udh maap menggangu")
+    }
+}
+
+</script>
+</html>
