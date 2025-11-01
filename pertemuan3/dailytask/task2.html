@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .div1{
+            display: flex;
+            justify-content: center;
+        }
+        .btn1{
+            padding: 10px;
+            font-weight: bold;
+            border-radius: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <button class="btn1" onclick="verifnilai()">Check Nilai Kamu</button>
+    </div>
+</body>
+<script>
+
+    function verifnilai(){
+        confirm("Kita lihat berapa rank nilai kamu")
+        let a = prompt("berapa nilai kamu barusan")
+        if( a >= 90){
+            alert("Rank Nilai kamu 'A' ")
+        }
+        else if(a >= 80){
+            alert("Rank Nilai kamu 'B' ")
+        }
+        else if( a >=70){
+            alert("Rank Nilai kamu 'C' ")
+        }
+        else if( a >= 60){
+            alert("Rank Nilai kamu 'D' ")
+        }
+        else{
+            alert("Rank Nilai kamu 'E' Wajib Remedi ");            
+        }
+    }
+    </script>
+</body>
+</html>
