@@ -44,8 +44,8 @@ function f2() {
 
 let dataSantri = [
     "bambang",
-    21,
-    true,
+    "Muads",
+    "Ijul",
     "dodi",
     "euis",
     "febri",
@@ -74,16 +74,16 @@ let dataSantri2 = [
     'Data1', "Data2", 'Data3', 'Data4', 'Data5']
 
 // LOOPING 
-function f3(data) {
-    for (start = 0; start < data.length; start++) {
-        if (start % 2 != 0) {
-            console.log(`${start + 1} Genap >>> ${data[start]}`);
-            // console.log((start + 1) + " Genap >>>" + data[start]);
-        } else {
-            console.log(`${start + 1} Ganjil >>> ${data[start]}`);
-        }
-    }
-}
+// function f3(data) {
+//     for (start = 0; start < data.length; start++) {
+//         if (start % 2 != 0) {
+//             console.log(`${start + 1} Genap >>> ${data[start]}`);
+//             // console.log((start + 1) + " Genap >>>" + data[start]);
+//         } else {
+//             console.log(`${start + 1} Ganjil >>> ${data[start]}`);
+//         }
+//     }
+// }
 
 // f3(dataSantri2)
 // console.log(`\n ========== \n`);
@@ -109,4 +109,20 @@ function logggingNama(nama, alamat,rek) {
 }
 
 console.log(logggingNama("Bambang", "jakarta","09876654321"));
+
+
+
+
+
+// form 2 
+document.getElementById("F2").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const name = document.getElementById("nameInput").value;
+    const lahir = document.getElementById("lahirinput").value;
+    const output = document.getElementById("outputBox");
+    output.innerText += `Halo, ${name}! Kamu lahir  di ${lahir}. udah tua aja kamu ya. \n`;
+
+    togglePopup("2")
+
+});
 
