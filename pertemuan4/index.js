@@ -183,3 +183,41 @@ function F3(angkaPertama, angkaKedua, operator) {
     return result;
 }
 
+// FORM 4
+// function 5
+document.getElementById("F4").addEventListener("submit", function (e) {
+  e.preventDefault();
+  const nick = document.getElementById("Nick").value;
+  const role = document.getElementById("Role").value;
+  F4(nick, role); // kirim 2 data
+});
+// function 6
+function F4(nick, role) {
+  let result;
+
+  switch (role) {
+    case "4":
+      result = "Mid Lane → Kamu harus menggunakan hero Mage";
+      break;
+    case "1":
+      result = "Exp Lane → Kamu harus menggunakan hero Fighter";
+      break;
+    case "2":
+      result = "Roam → Kamu harus menggunakan hero Tank atau Support";
+      break;
+    case "3":
+      result = "Gold Lane → Kamu harus menggunakan hero Marksman";
+      break;
+    case "5":
+      result = "Hyper → Kamu harus menggunakan hero Assassin atau Fighter";
+      break;
+    default:
+      alert("Role tidak sesuai! Pastikan penulisan sesuai pilihan yang tersedia.");
+      return;
+  }
+
+  const output = document.getElementById("outputBox");
+  output.innerText += `\nF4: Halo Player ${nick}, jika kamu memilih ${result}.`;
+  togglePopup("4");
+  return result;
+}
