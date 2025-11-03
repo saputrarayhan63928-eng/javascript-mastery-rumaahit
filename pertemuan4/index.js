@@ -120,17 +120,24 @@ document.getElementById("F1").addEventListener("submit", function (e) {
 // function  2
 document.getElementById("F2").addEventListener("submit", function (e) {
     e.preventDefault();
-    const name = document.getElementById("nameInput").value;
-    const lahir = document.getElementById("lahirinput").value;
-    const output = document.getElementById("outputBox");
-    output.innerText += `Halo, ${name}! Kamu lahir  di ${lahir}. udah tua aja kamu ya. \n`;
-
-    togglePopup("2")
+    const nomor1 = document.getElementById("mulai").value;
+    const nomor2 = document.getElementById("selesai").value;
+    perulangan(nomor1,nomor2)
 
 });
+// funcrion 3
+function perulangan(nomor1,nomor2){
+    let mulai =Number(nomor1)
+    let selesai =Number(nomor2)
+    for(;mulai <= selesai; mulai++){
+           const output = document.getElementById("outputBox");
+    output.innerText += `Ini adalah perulangan ke ${mulai}. \n`;
+    } 
+    togglePopup("2")
+} 
 
 //  form 3
-// function 3
+// function 4
 document.getElementById("F3").addEventListener("submit", function (e) {
     e.preventDefault();
     togglePopup("3")
@@ -147,7 +154,7 @@ document.getElementById("F3").addEventListener("submit", function (e) {
 });
 
 // Kalkulatornya
-// function 4
+// function 5
 function F3(angkaPertama, angkaKedua, operator) {
     togglePopup("3");
     let result;
@@ -184,14 +191,14 @@ function F3(angkaPertama, angkaKedua, operator) {
 }
 
 // FORM 4
-// function 5
+// function 6
 document.getElementById("F4").addEventListener("submit", function (e) {
   e.preventDefault();
   const nick = document.getElementById("Nick").value;
   const role = document.getElementById("Role").value;
   F4(nick, role); // kirim 2 data
 });
-// function 6
+// function 7
 function F4(nick, role) {
   let result;
 
