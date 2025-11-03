@@ -237,3 +237,7 @@ function pengembalian (a1,b1){
 let f8 = pengembalian(10,20)
 let tambah = f8 + 20
 console.log(`Pertambahan singkat :  ${f8} + 20 hasil = ${tambah} `)
+
+// function 9
+const pengurangan1 = (n1 , n2) => n1 - n2 ;
+console.log(pengurangan1(10,20));
