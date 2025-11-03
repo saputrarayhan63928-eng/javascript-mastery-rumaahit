@@ -1,14 +1,4 @@
-// FORM F1
-document.getElementById("F1").addEventListener("submit", function (e) {
-    e.preventDefault();
-    const name = document.getElementById("nameInput").value;
-    const age = document.getElementById("ageInput").value;
-    const output = document.getElementById("outputBox");
-    output.innerText += `Halo, ${name}! Umur kamu ${age} tahun. \n`;
 
-    togglePopup("1")
-
-});
 
 /*
 - [document.getElementById("")] ini kegunaannya untuk mengambil sebuha elemnet dari html yg memiliki id yg sama
@@ -111,10 +101,23 @@ function logggingNama(nama, alamat,rek) {
 console.log(logggingNama("Bambang", "jakarta","09876654321"));
 
 
+// =========================================================================================
 
+// FORM F1
+// function 1
+document.getElementById("F1").addEventListener("submit", function (e) {
+    e.preventDefault();
+    const name = document.getElementById("nameInput").value;
+    const age = document.getElementById("ageInput").value;
+    const output = document.getElementById("outputBox");
+    output.innerText += `Halo, ${name}! Umur kamu ${age} tahun. \n`;
 
+    togglePopup("1")
 
-// form 2 
+});
+
+// form 2
+// function  2
 document.getElementById("F2").addEventListener("submit", function (e) {
     e.preventDefault();
     const name = document.getElementById("nameInput").value;
@@ -125,4 +128,58 @@ document.getElementById("F2").addEventListener("submit", function (e) {
     togglePopup("2")
 
 });
+
+//  form 3
+// function 3
+document.getElementById("F3").addEventListener("submit", function (e) {
+    e.preventDefault();
+    togglePopup("3")
+    const firstNumber = document.getElementById("firstNumber").value;
+    const secondNumber = document.getElementById("secondNumber").value;
+    const operator = document.getElementById("operator").value;
+
+    if (!firstNumber || !secondNumber || !operator) {
+        alert("Masukan Angka / Opeator");
+    } else {
+        F3(firstNumber, secondNumber, operator)
+    }
+
+});
+
+// Kalkulatornya
+// function 4
+function F3(angkaPertama, angkaKedua, operator) {
+    togglePopup("3");
+    let result;
+    const a = Number(angkaPertama);
+    const b = Number(angkaKedua);
+
+    if (isNaN(a) || isNaN(b) && !a || !b) {
+        console.log("Input harus berupa angka");
+        return;
+    }
+
+    switch (operator) {
+        case "*":
+            result = a * b;
+            break;
+        case "+":
+            result = a + b;
+            break;
+        case "-":
+          result = a - b
+          break;
+        case "/":
+            result = a / b;
+            break;
+        default:
+            console.log("Operator tidak valid");
+            return;
+    }
+
+    const output = document.getElementById("outputBox");
+    output.innerText += `F3: Hasil dari ${angkaPertama} ${operator} ${angkaKedua} = ${result}`;
+    togglePopup("3");
+    return result;
+}
 
