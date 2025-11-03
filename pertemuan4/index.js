@@ -241,3 +241,9 @@ console.log(`Pertambahan singkat :  ${f8} + 20 hasil = ${tambah} `)
 // function 9
 const pengurangan1 = (n1 , n2) => n1 - n2 ;
 console.log(pengurangan1(10,20));
+
+// function 10
+const exspresi = function perkenalan(Nama,asal){
+    return (`Halo Saya ${Nama} , Asal ${asal} , Nice To Meet You `)
+}
+console.log(exspresi("M Rayhan", "Kalimantan"));
