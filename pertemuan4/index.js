@@ -17,6 +17,21 @@ function togglePopup(no) {
     document.getElementById(`popupModal${no}`).classList.toggle("hidden");
 }
 
+/*
+Gunanya kode di atas ini itu adalah untuk menggilangkan suatu class yang awalnya
+.modal.hidden {
+  display: none;
+}
+ketika di klik dia akan otomatis menghapus class yg ada di html menjadi
+.modal. {
+  display: none;
+}
+  yg ngebuat di bagian stylenya tdk ke detek. dan ketika di klik lagi dia akan muncullin kembali menjadi
+  .modal.hidden {
+  display: none;
+}
+*/
+
 function clearOutput() {
     document.getElementById("outputBox").innerText = "";
 }
@@ -113,7 +128,9 @@ document.getElementById("F1").addEventListener("submit", function (e) {
     output.innerText += `Halo, ${name}! Umur kamu ${age} tahun. \n`;
 
     togglePopup("1")
-
+/*
+[inertext] ini kegunaannya untuk memasukan sebuah input dari js agar bisa muncul di bagian htmlnya
+*/
 });
 
 // form 2
