@@ -19,3 +19,4 @@ Catatan untuk js
 - [let] itu variable yg bisa di deklarasi dgn blok kode ({}) dan tidak bisa di deklarasi ulang dlm blok kode yg sama
 - [var] itu variable yg bisa Var hanya mengenal scope fungsi dan scope global yg bisa di deklarasi di mana saja
 - [const] itu variable yg tetap valuenya dan tidak bisa di deklarasi di mana pun
+- global tidak bisa mengambil data dari  loca [blok kode]
