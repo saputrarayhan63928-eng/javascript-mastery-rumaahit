@@ -15,8 +15,8 @@ console.log(fungsi());
 console.log(ab) //hasilnya undefined
 var ab = "halo"
 
-console.log(ac)  //hasilnya undefined
-var ac = "halo halo"
+// console.log(ac)  // ini gak bisa, dia akan error
+// let ac = "halo halo"
 
 // console.log(ad);       // ini gak bisa ,dia akan error
 // const ad = "halo halo halo"  
