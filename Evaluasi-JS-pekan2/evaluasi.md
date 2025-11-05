@@ -1,0 +1,3 @@
+jujur pas di hari ke 4 kemarin yg masalah di bagian html itu saya kurang mengerti karena tiba tiba aja langsung di suruh copy paste yg di mana di dlm code tersebut ada bagian bagian yg di namakan dom dan di hari itu juga kita di tugaskan untuk menambah function di situ  yg membuat kita harus lebih ekstra untuk berpikir
+
+dan saya kaget tugas evaluasi pekan 1 bln 2 ini jam kumpulnya ternyata jam 11.30 pagi yg di mana masing masing soal dari 1 - 5 itu jawabannya pada panjang panjang.
