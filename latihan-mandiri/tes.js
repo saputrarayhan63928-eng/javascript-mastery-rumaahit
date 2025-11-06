@@ -19,4 +19,12 @@ console.log(nama.length);
 // Menyisipkan/Menghapus Elemen di Tengah
 //  `splice(index, jumlah, elemenBaru)`: hapus atau tambah elemen
 
+// cara memanggil data array secara berurut
+for (let hasil = 0; hasil < nama.length; hasil++) {
+    console.log(`dia adalah : ${nama[hasil]}`)
+}
 
+//  study case yg dari mas el
+for (let hasil = 0; hasil < nama.length; hasil++) {
+    console.log(`${hasil + 1}.  ${nama[hasil]}`)
+}
