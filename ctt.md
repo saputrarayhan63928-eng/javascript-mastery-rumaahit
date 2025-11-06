@@ -20,3 +20,23 @@ Catatan untuk js
 - [var] itu variable yg bisa Var hanya mengenal scope fungsi dan scope global yg bisa di deklarasi di mana saja
 - [const] itu variable yg tetap valuenya dan tidak bisa di deklarasi di mana pun
 - global tidak bisa mengambil data dari  loca [blok kode]
+
+================================================================================================================
+
+==== Week 2 ====
+
+=== Day 1 ===
+
+- Array adalah variable yg menyimpan banyak data dengan tanda ([])
+contoh : let a = ["a","b","c","d","e","f"]
+- dan ketika array di baca typenya adalah [object]
+- dan array bisa di masukkan semua type data apapun
+- dan untuk menambah data itu dgn  :
+    - push("Nama data") // ini untuk menambah data di bagian akhirnya
+    - unshift("Nama data") // ini untuk menambah data di bagian awal
+- dan bisa di kurangin datanya itu dgn :
+    - pop() // ini untuk menghapus data yg ada di dlmnya di bagian belakang
+    - shift()  // ini untuk menghapus data yg ada di dlmnya di bagian depan
+- dan bisa di lihat banyak data di dlm array itu dgn [lenght]
+- dan cara manggil spesifik data dlm array itu dgn [console.log(namadata(urutandatanya))]
+- dan cara membaca urutan data array itu di muali dari 0 - dst
