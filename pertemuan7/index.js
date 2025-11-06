@@ -36,8 +36,15 @@ function f2(namaData) {
 // FUNCTION ADD DATA TO ARRAY
 // ================================================
 
-const dataSantri = ['Bambang']
+let dataSantri = ["ijul","akhdan","muad","mutil"]
 const output = document.getElementById('outputBox');
+
+function hapus(){
+    // dataSantri = [] ini untuk menghapus semuanya
+    dataSantri.pop() // ini untuk menghapus di bagian belakang datanya
+    // dataSantri.shift() ini untuk menghapus di bagian depan data
+    output.innerText = dataSantri
+}
 
 document.getElementById("F1").addEventListener("submit", function (e) {
     e.preventDefault();
