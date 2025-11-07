@@ -40,3 +40,13 @@ contoh : let a = ["a","b","c","d","e","f"]
 - dan bisa di lihat banyak data di dlm array itu dgn [lenght]
 - dan cara manggil spesifik data dlm array itu dgn [console.log(namadata(urutandatanya))]
 - dan cara membaca urutan data array itu di muali dari 0 - dst
+
+=== Day 2 ===
+
+- [forEach] di gunakan untuk memisahkan interaksi ke suatu Array men jadi 3 bagian :
+                        - yg pertama itu untuk valuenya maksudnya dia akan memanggil arraynya 1 per 1
+                        - yg kedua itu untuk indexnya maksudnya lokasi data arraynya
+                        - yg ketiga itu untuk arraynya dia mengulang arraynya sesuai jumlahnya
+- [map] dia sama kayak return cmn dia itu fersi untuk arraynya dan mekanismenya sama kayak [forEach]
+- [filter] dia akan mengembalikan data / memperbarui data ( kayak mirip if gitu lah) dgn syarat yg tlh di beri, jika iya maka dia akan menjalankan
+- [find] dia di gunakan mencari 1 data array menjadi data baru ketika syaratnya terpenuhi
