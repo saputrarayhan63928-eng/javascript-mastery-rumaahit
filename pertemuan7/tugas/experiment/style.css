@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+header{
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 5vh;
+}
+
+main {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.inputdata{
+    background-color: rgb(255, 0, 242);
+    padding: 5vh;
+    margin: 20vh;
+    border-radius: 50px;
+}
+.hasilinput{
+    background-color: rgb(247, 0, 255);
+    padding: 5vh;
+    margin: 20vh;
+    border-radius: 50px;
+    color: black;
+}
+.output{
+    padding: 10px;
+}
+.Belanja{
+    padding: 10px;
+    background-color: white;
+    height: 20vh;
+    width: 70vh;
+    border-radius: 50px;
+}
+.Belanja2{
+     padding: 10px;
+    background-color: white;
+    height: 10vh;
+    width: 70vh;
+    border-radius: 50px;
+}
+.namainput{
+         padding: 10px;
+    background-color: white;
+    height: 5vh;
+    width: 50vh;
+    border-radius: 50px;
+}
+.hargainput{
+         padding: 10px;
+    background-color: white;
+    height: 5vh;
+    width: 50vh;
+    border-radius: 50px;
+}
+.tombol{
+    margin-top: 5vh;
+    height: 5vh;
+    border-radius: 50px;
+    background-color: rgba(98, 255, 7, 0.925); 
+    color: darkblue;
+    font-weight: bold;
+    font-size: 15px;
+}
+.tombol:hover{
+background-color: aqua;
+color: black;
+cursor: pointer;
+}

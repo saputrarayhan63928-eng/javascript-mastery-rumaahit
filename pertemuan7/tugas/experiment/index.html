@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List Belanja</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Selamat datang di To Do List Sederhana</h1>
+    </header>
+    <main>
+        <div class="inputdata">
+            <h1>Nama Barang</h1>
+            <form id="ambil">
+            <input type="text" id="inputnama" class="namainput" name="namadata" placeholder="Masukkan Nama Barang" required>
+            <h1>Harga Barang</h1>
+            <input type="number" id="inputharga"class="hargainput" name="hargadata" placeholder="Masukkan Harga" required>
+            <button type="submit" class="tombol" >Submit</button>
+        </form>
+        </div>
+        <div class="hasilinput">
+            <h1>Total Barang</h1>
+            <div class="Belanja">
+            <output id="totalbarang" class="output"></output>
+        </div >
+            <h1>Total Harga</h1>
+            <div class="Belanja2">
+            <output id="totalharga" class="output"></output>
+        </div>
+        </div>
+    </main>
+</body>
+<script src="index.js"></script>
+</html>
