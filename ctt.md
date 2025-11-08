@@ -50,3 +50,7 @@ contoh : let a = ["a","b","c","d","e","f"]
 - [map] dia sama kayak return cmn dia itu fersi untuk arraynya dan mekanismenya sama kayak [forEach]
 - [filter] dia akan mengembalikan data / memperbarui data ( kayak mirip if gitu lah) dgn syarat yg tlh di beri, jika iya maka dia akan menjalankan
 - [find] dia di gunakan mencari 1 data array menjadi data baru ketika syaratnya terpenuhi
+
+=== day 4 ===
+- object key : dia adalah sebuah variable yg menyimpan banyak data sekaligus dan di pisahkan dgn key yg berbeda
+- dan cara pendekatannya itu dgn manggil variablenya dan di sambung dgn key yg ad di dlmnya
