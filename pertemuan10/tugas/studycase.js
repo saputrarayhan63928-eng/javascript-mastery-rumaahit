@@ -151,4 +151,3 @@ if(v.nilai >= 70){
 }
 })
 console.log(validasi);
-// study case 22 membuat validasi data belanjaan
