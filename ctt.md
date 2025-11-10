@@ -51,6 +51,12 @@ contoh : let a = ["a","b","c","d","e","f"]
 - [filter] dia akan mengembalikan data / memperbarui data ( kayak mirip if gitu lah) dgn syarat yg tlh di beri, jika iya maka dia akan menjalankan
 - [find] dia di gunakan mencari 1 data array menjadi data baru ketika syaratnya terpenuhi
 
-=== day 4 ===
+=== day 3 ===
 - object key : dia adalah sebuah variable yg menyimpan banyak data sekaligus dan di pisahkan dgn key yg berbeda
 - dan cara pendekatannya itu dgn manggil variablenya dan di sambung dgn key yg ad di dlmnya
+
+=== day 4 ===
+- [Destructuring..Array] ini intinya dia mengubah datanya yg awalnya array menjadi object
+- [Destructuring..object] ini juga sama dia mengubah data object menjadi data array
+- [spread] dia bisa menggabungkan data array/object ke data array/object yg lainnya dan bisa di guankan untuk menyalin, menggabungkan, atau memecah data.
+- [rest] dia di gunakan Untuk mengumpulkan sisa data jadi satu variabel (kebalikan dari spread)
