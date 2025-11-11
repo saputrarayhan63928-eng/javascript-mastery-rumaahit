@@ -60,3 +60,16 @@ contoh : let a = ["a","b","c","d","e","f"]
 - [Destructuring..object] ini juga sama dia mengubah data object menjadi data array
 - [spread] dia bisa menggabungkan data array/object ke data array/object yg lainnya dan bisa di guankan untuk menyalin, menggabungkan, atau memecah data.
 - [rest] dia di gunakan Untuk mengumpulkan sisa data jadi satu variabel (kebalikan dari spread)
+
+=== day 5 ===
+- [trim()] dia function bawaan js yg di mana kegunaannya untuk menghapus sepasi yg typo
+- [innertext] itu gunanya ketika kita mau nambah kata doang kata dari js ke html
+- [innerHTML] itu gunanya ketika kita mau nambah kata + ada element htmlnya dari js kehtmlnya
+- [toLocaleString] itu adalah sintask yg dibawakan dari js yg berguna untuk gunakan untuk mengubah data (seperti angka, tanggal, atau waktu) menjadi string yang sesuai dengan format lokal (bahasa dan negara) pengguna
+dan [toLocaleString] sendiri memiliki beberapa parameter penting di dalamnya yaitu :
+    - bagian [style] di gunakan untuk format tampilan angka contoh : ["decimal"],["currency"],["percent"]
+    - bagian [currency] di gunakan untuk kode mata uangnya contoh : ["IDR]",["USD"],["JPY"]
+    - bagian [minimumFractionDigits] di gunakan untuk Jumlah minimum angka di belakang koma
+    - bagian [maximumFractionDigits] di gunakan untuk Jumlah maksimum angka di belakang koma
+    - bagian [useGrouping]di gunakan untuk Hilangkan tanda pemisah ribuan
+- [parseInt] di gunakan untuk mengubah type ddata inputan yg awalnya seting menjadi integer
