@@ -187,5 +187,125 @@ function kosongkanKeranjang(){
     tampilkanKeranjang()
 }
 // ===============================
-// 
+// Pembayaran
 // ===============================
+const pesanRingkasan = document.getElementById("pesanRingkasan");
+const pesanPembayaran = document.getElementById("pesanPembayaran");
+const strukPembelian = document.getElementById("strukPembelian");
+const inputUangBayar = document.getElementById("uangBayar");
+
+const teksStrukKosong = "<p>Belum ada struk penjualan.</p>";
+
+pesanKasir.innerText = "📝✨ Tuliskan nama Anda sebagai kasir agar pelayanan tercatat.";
+ringkasanKeranjang.innerHTML = "<p>Keranjang masih kosong.</p>";
+totalBelanjaElemen.innerText = "Total: Rp 0";
+pesanRingkasan.innerText = "Belum ada ringkasan yang disimpan.";
+pesanPembayaran.innerText = "Masukkan jumlah uang yang diterima.";
+strukPembelian.innerHTML = teksStrukKosong;
+
+const now = new Date();
+const tanggal = now.toLocaleDateString('id-ID', { day: '2-digit', month: 'long', year: 'numeric' });
+const jam = now.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
+
+
+function prosesPembayaran() {
+    const total = hitungTotal();
+    if (isibelanja.length === 0) {
+        pesanPembayaran.innerText = "Tambahkan produk terlebih dahulu.";
+        strukPembelian.innerHTML = teksStrukKosong;
+        return;
+    }
+
+    const uangMasuk = parseInt(inputUangBayar.value, 10);
+    if (isNaN(uangMasuk)) {
+        pesanPembayaran.innerText = "Masukkan angka uang yang diterima.";
+        strukPembelian.innerHTML = teksStrukKosong;
+        return;
+    }
+
+    if (uangMasuk < total) {
+        const selisih = total - uangMasuk;
+        pesanPembayaran.innerText = "Uang kurang Rp " + formatRupiah(selisih) + ".";
+        strukPembelian.innerHTML = teksStrukKosong;
+        return;
+    }
+
+    const kembalian = uangMasuk - total;
+
+    pesanPembayaran.innerText = "Transaksi selesai. Kembalian Rp " + formatRupiah(kembalian) + ".";
+    let isiStruk = "<strong>Struk Penjualan</strong>";
+    const namaKasir = user.nama === "" ? "Empty Name" : user.nama;
+    isiStruk += "<p>" + tanggal + " - " + jam + "</p>";
+    isiStruk += "<p>Kasir: " + namaKasir + "</p>";
+    isiStruk += "<br>"
+    isiStruk += "<p>Daftar produk:</p>";
+    const listItem = []
+    for (let i = 0; i < isibelanja.length; i++) {
+        const item = isibelanja[i];
+        const subtotal = item.harga * item.jumlah;
+        listItem.unshift({ item: item.nama, harga: item.harga, jumlah: item.jumlah, total: formatRupiah(subtotal) })
+        isiStruk += '<p>- ' + item.nama + ' (' + item.jumlah + ') = Rp ' + formatRupiah(subtotal) + '</p>';
+    }
+    isiStruk += "<br>"
+    isiStruk += "<p>Total: Rp " + formatRupiah(total) + "</p>";
+    isiStruk += "<p>Uang diterima: Rp " + formatRupiah(uangMasuk) + "</p>";
+    isiStruk += "<p>Kembalian: Rp " + formatRupiah(kembalian) + "</p>";
+
+    strukPembelian.innerHTML = isiStruk;
+
+ 
+// ================================================
+// Tambah download pdf
+// ================================================
+    const btnDownload = document.createElement('button');
+    btnDownload.innerText = "Download PDF";
+    btnDownload.style.marginTop = "10px";
+    btnDownload.onclick = () => {
+        const { jsPDF } = window.jspdf;
+        const doc = new jsPDF();
+        let yPos = 10;
+
+        doc.setFontSize(16);
+        doc.text("Struk Penjualan", 10, yPos);
+        yPos += 10;
+
+        const now = new Date();
+        const dateStr = now.toLocaleDateString('id-ID', { day: '2-digit', month: 'long', year: 'numeric' });
+        const timeStr = now.toLocaleTimeString('id-ID', { hour: '2-digit', minute: '2-digit' });
+        doc.text(`${dateStr} - ${timeStr}`, 10, yPos);
+        yPos += 10;
+
+        doc.setFontSize(12);
+        doc.text("Kasir: " + namaKasir, 10, yPos);
+        yPos += 10;
+
+        doc.text("Daftar produk:", 10, yPos);
+        yPos += 6;
+
+        listItem.forEach(item => {
+            doc.text(`- ${item.item} Rp ${formatRupiah(item.harga)}  (${item.jumlah}) = Rp ${formatRupiah(item.total)}`, 10, yPos);
+            yPos += 6;
+        });
+
+        yPos += 4;
+        doc.text("Total: Rp " + formatRupiah(total), 10, yPos);
+        yPos += 6;
+        doc.text("Uang diterima: Rp " + formatRupiah(uangMasuk), 10, yPos);
+        yPos += 6;
+        doc.text("Kembalian: Rp " + formatRupiah(kembalian), 10, yPos);
+
+        doc.save("struk_penjualan.pdf");
+    };
+
+    // Hapus tombol lama jika ada sebelumnya
+    const existingBtn = strukPembelian.querySelector('button');
+    if (existingBtn) existingBtn.remove();
+
+    strukPembelian.appendChild(btnDownload);
+
+    keranjang.length = 0;
+    tampilkanKeranjang();
+    inputUangBayar.value = "";
+}
+
+tampilkanProduk(); 
