@@ -73,3 +73,18 @@ dan [toLocaleString] sendiri memiliki beberapa parameter penting di dalamnya yai
     - bagian [maximumFractionDigits] di gunakan untuk Jumlah maksimum angka di belakang koma
     - bagian [useGrouping]di gunakan untuk Hilangkan tanda pemisah ribuan
 - [parseInt] di gunakan untuk mengubah type ddata inputan yg awalnya seting menjadi integer
+
+================================================================================================================
+
+=== day 1 ===
+
+- [export] di gunakan untuk mengeluarkan sebuah function/ variable / sintask lainya agar bisa di gunakan di file yg lainnya
+- [import] di gunakan untuk mengambil apa yg tlh di [export] tadi
+- [name.export] di uitu seperti memanggil dgn sekali panggil seperti import variable dan function atau sintask lainya
+- [default.export] itu adalah ketika ada yg di import dlm 1 file dan importnya tidak ada yg sama maka yg ke ambil pertama adalah import default tersebeut
+- [mix.import] itu menggabungkan [import.default] dan [import] biasa  dlm 1 pemanggilan
+- di dlm html ketika kita ingin menggabungkan js dgn js lainnya di dlm sebuah folder maka perlu menambahkan [type] di bagian script di dlm htmlnya
+- [*] ini dalam import tandanya manggil semua yg udh di lebleli dgn export di bagian js yg mau di import
+- untuk mengubah nama pemanggilan nya dgn [as] ketika saat mau mengimport
+- [class] itu adalah template (cetakan) untuk membuat objek dengan struktur dan perilaku tertentu.
+Bayangkan seperti blueprint rumah. atau intinya itu bisa membuat data yg sama dgn fungsi yg sama dlm satu blueprit

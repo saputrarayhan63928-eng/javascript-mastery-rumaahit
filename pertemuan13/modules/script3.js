@@ -1,0 +1,1 @@
+export const masukan = document.getElementById("tagDiv1")
