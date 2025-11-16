@@ -88,3 +88,10 @@ dan [toLocaleString] sendiri memiliki beberapa parameter penting di dalamnya yai
 - untuk mengubah nama pemanggilan nya dgn [as] ketika saat mau mengimport
 - [class] itu adalah template (cetakan) untuk membuat objek dengan struktur dan perilaku tertentu.
 Bayangkan seperti blueprint rumah. atau intinya itu bisa membuat data yg sama dgn fungsi yg sama dlm satu blueprit
+
+=== Day 2 ===
+
+- [json] itu untuk mengambil data dari luar 
+- [stringfy] ini unyuk mengubah data object js menjadi data json
+- [parsel] ini kebalikannya dgn [stringfy] ini untuk mengubah data json menjadi data object js
+- [ftecth()] ini untuk mengambil data dari internet
