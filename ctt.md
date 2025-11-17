@@ -95,3 +95,10 @@ Bayangkan seperti blueprint rumah. atau intinya itu bisa membuat data yg sama dg
 - [stringfy] ini unyuk mengubah data object js menjadi data json
 - [parsel] ini kebalikannya dgn [stringfy] ini untuk mengubah data json menjadi data object js
 - [ftecth()] ini untuk mengambil data dari internet
+- [localStorage] hanya berfungsi di browser bkn di node.js
+
+=== day 3 ===
+
+- [callback] itu bisa di bilang dia di panggil di dlm params 
+- [setTimeout] ini untuk melakukan penjedaan ketika kode telah berjalan dan dia di hitung dari mili detik yaitu 1000ms = 1 detik
+- [function.anonim] itu kita buat functionnya di dlm paramsnya
