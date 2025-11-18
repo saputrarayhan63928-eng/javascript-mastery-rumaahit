@@ -102,3 +102,7 @@ Bayangkan seperti blueprint rumah. atau intinya itu bisa membuat data yg sama dg
 - [callback] itu bisa di bilang dia di panggil di dlm params 
 - [setTimeout] ini untuk melakukan penjedaan ketika kode telah berjalan dan dia di hitung dari mili detik yaitu 1000ms = 1 detik
 - [function.anonim] itu kita buat functionnya di dlm paramsnya
+
+=== day 4 ===
+
+- Ketika proses  setTimeout dimasukkan ke dalam Promise dan kamu memanggil resolve() setelah selesai → maka .then() akan menunggu proses itu dan ikut setelahnya.

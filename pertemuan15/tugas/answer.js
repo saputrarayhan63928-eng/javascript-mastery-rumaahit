@@ -119,3 +119,20 @@ function validasi(a){
 }
 kehadiran(absensi,validasi)
 // soal 17
+const inputmsg = document.getElementById("input")
+const display = document.getElementById("hasil")
+function addtodolist(){
+   msg = inputmsg.value.trim()
+   display.innerHTML += `<p>${msg}</p>`
+
+
+   inputmsg.value = ""
+}
+
+// soal 18
+
+//  soal 19
+function hapus(){
+  display.innerHTML  = ""
+}
+// soal 20

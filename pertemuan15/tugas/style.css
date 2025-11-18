@@ -1,0 +1,82 @@
+/* ====== STYLE DASAR ====== */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #2f4360;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+/* ====== KOTAK INPUT & HASIL ====== */
+div {
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    width: 350px;
+}
+
+h1 {
+    margin-top: 0;
+    font-size: 22px;
+    text-align: center;
+    color: #333;
+}
+
+/* ====== TEXTAREA ====== */
+textarea {
+    width: 80%;
+    height: 120px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 15px;
+    outline: none;
+    resize: none;
+}
+
+textarea:focus {
+    border-color: #0066ff;
+    box-shadow: 0 0 5px rgba(0,102,255,0.3);
+}
+
+/* ====== BUTTON ====== */
+.div2{
+    padding: 10px;
+}
+button {
+    padding: 10px 5px;
+    background: #0066ff;
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    font-size: 14px;
+    margin-right: 8px;
+    transition: .2s;
+}
+
+button:hover {
+    background: #004ecc;
+}
+
+button:nth-child(2) {
+    background: #ff3b3b;
+}
+
+button:nth-child(2):hover {
+    background: #d42e2e;
+}
+
+/* ====== HASIL ====== */
+#hasil {
+    min-height: 150px;
+    border: 1px solid #ddd;
+    padding: 5px;
+    border-radius: 10px;
+    background: #fafafa;
+    font-size: 15px;
+    line-height: 1.5;
+}
