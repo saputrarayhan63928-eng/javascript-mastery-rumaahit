@@ -217,3 +217,4 @@ async function analyzeProducts() {
   
   console.log(expensive);
 }
+analyzeProducts()
