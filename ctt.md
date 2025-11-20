@@ -106,3 +106,6 @@ Bayangkan seperti blueprint rumah. atau intinya itu bisa membuat data yg sama dg
 === day 4 ===
 
 - Ketika proses  setTimeout dimasukkan ke dalam Promise dan kamu memanggil resolve() setelah selesai → maka .then() akan menunggu proses itu dan ikut setelahnya.
+= [.then] itu bisa di gabung di dalam [.then] maksudnya itu ada [.then] di dalam [.then]
+
+=== day 5 ===
