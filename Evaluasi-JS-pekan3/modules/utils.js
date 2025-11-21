@@ -50,3 +50,18 @@ export function getNextPrayer(jadwalHarian, nowDateObj) {
     }
   }
 }
+
+export function hitungSelisihWaktu(jamMenitStr, now = new Date()) {
+    const [jamSholat, menitSholat] = jamMenitStr.split(":").map(Number);
+    
+    const totalMenitSholat = jamSholat * 60 + menitSholat;
+    const totalMenitSekarang = now.getHours() * 60 + now.getMinutes();
+
+    let selisih = totalMenitSholat - totalMenitSekarang;
+
+    if (selisih < 0) return "Sudah lewat";
+
+    const jam = Math.floor(selisih / 60);
+    const menit = selisih % 60;
+    return jam,menit
+}

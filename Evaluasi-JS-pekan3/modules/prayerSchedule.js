@@ -3,6 +3,8 @@ import { getDailySchedule } from "./api.js"
 import { getTodayForApi } from "./utils.js"
 import { getTodayForDisplay } from "./utils.js"
 import { getNextPrayer } from "./utils.js"
+import { hitungSelisihWaktu } from "./utils.js"
+import { padZero } from "./utils.js"
 
 const updatetanggal = document.getElementById("tanggalheader")
 let tanggalsekarang = getTodayForDisplay()
@@ -40,6 +42,7 @@ export async function ambilinputkota(){
    displayisya(sholat)
    displaytanggalsekarang(sholat)
    kotaterbaru(tempat)
+   sholatuntuksekarang(sholat)
     
     // displayImsak(sholat)
 }
@@ -94,4 +97,21 @@ function kotaterbaru(kota){
     let profinsi = kota.lokasi
     const kotaterbarubanget = document.getElementById("updatekotaterbaru")
     kotaterbarubanget.innerText = `Kota: ${tinggal} === Profinsi: ${profinsi}`
+}   
+function sholatuntuksekarang(jadwal){
+    let next = getNextPrayer(jadwal, new Date());
+
+    let sekarang = new Date();
+    let jamSek = padZero(sekarang.getHours());
+    let menitSek = padZero(sekarang.getMinutes());
+
+    let countdown = hitungSelisihWaktu(next.time, sekarang);
+
+    const sholatsekarang = document.getElementById("waktusekarangsholat");
+    sholatsekarang.innerHTML = `
+        <h2>
+        Waktu sekarang : ${jamSek}:${menitSek},
+        Sholat : ${next.name} - ${next.time} 
+        <strong>Kurang : ${countdown} menit</strong>
+        </h2>`;
 }
