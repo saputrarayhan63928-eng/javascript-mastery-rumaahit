@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+   .faq {
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 6px;
+}
+.question {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  font-weight: bold;
+}
+.answer {
+  display: none;
+  padding-top: 8px;
+  color: #444;
+}
+    </style>
+</head>
+<body>
+<div class="faq">
+  <div class="question">
+    Apa itu DOM?
+    <span class="icon">+</span>
+  </div>
+  <div class="answer">DOM adalah representasi HTML di JS.</div>
+</div>
+<div class="faq">
+  <div class="question">
+    Apa itu Event?
+    <span class="icon">+</span>
+  </div>
+  <div class="answer">Event adalah aksi (click, keyup, dll).</div>
+</div>
+<script>
+   const faqs = document.querySelectorAll(".faq");
+  faqs.forEach((faq) => {
+    const question = faq.querySelector(".question");
+    const answer = faq.querySelector(".answer");
+    const icon = faq.querySelector(".icon");
+    question.addEventListener("click", () => {
+      faqs.forEach((otherFaq) => {
+        if (otherFaq !== faq) {
+          otherFaq.querySelector(".answer").style.display = "none";
+          otherFaq.querySelector(".icon").textContent = "+";
+        }
+      });
+      const isOpen = answer.style.display === "block";
+      if (isOpen) {
+        answer.style.display = "none";
+        icon.textContent = "+";
+      } else {
+        answer.style.display = "block";
+        icon.textContent = "-";
+      }
+    });
+  });
+</script>
+</body>
+</html>

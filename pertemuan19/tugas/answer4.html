@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+          [data-tab-content] {
+    display: none;
+  }
+  [data-tab-content].active {
+    display: block;
+  }
+    </style>
+</head>
+<body>
+    <div id="tabs">
+  <button data-tab="profil"  class="active">Profil</button>
+  <button data-tab="kelas">Kelas</button>
+  <button data-tab="kontak">Kontak</button>
+</div>
+
+<div id="tab-content">
+  <div data-tab-content="profil" class="active">Ini Profil.</div>
+  <div data-tab-content="kelas" >Ini info kelas.</div>
+  <div data-tab-content="kontak" >Ini kontak.</div>
+</div>
+
+<script>
+const tabs = document.getElementById("tabs");
+  const contents = document.querySelectorAll("[data-tab-content]");
+  const buttons = document.querySelectorAll("#tabs button");
+  tabs.addEventListener("click", (e) => {
+    const tab = e.target.dataset.tab;
+    if (!tab) return;
+    buttons.forEach((btn) => {
+      btn.classList.toggle("active", btn.dataset.tab === tab);
+    });
+    contents.forEach((c) => {
+      c.classList.toggle("active", c.dataset.tabContent === tab);
+    });
+  });
+</script>
+</body>
+</html>

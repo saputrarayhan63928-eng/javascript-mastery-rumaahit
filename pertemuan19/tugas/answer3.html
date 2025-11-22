@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2 id="a">Daftar Santri</h2>
+<input id="search" placeholder="Cari..." />
+<ul id="santri-list">
+  <li>Ahmad</li>
+  <li>Bilal</li>
+  <li>Citra</li>
+  <li>Diandra</li>
+  <li>Fadhli</li>
+  <li>Nopal</li>
+  <li>Rayhan</li>
+  <li>Aisyah</li>
+  <li>Aqila</li>
+</ul>
+<p id="info"></p>
+
+<script>
+  const search = document.getElementById("search");
+  const list = document.getElementById("santri-list");
+  const info = document.getElementById("info");
+  const marks = document.getElementById("a")
+
+  search.addEventListener("keyup", () => {
+    const q = search.value.toLowerCase();
+    let countShown = 0;
+
+    list.querySelectorAll("li").forEach((li) => {
+      const name = li.textContent.toLowerCase();
+      const match = name.includes(q);
+      li.style.display = match ? "list-item" : "none";
+      if (match) countShown++;
+    });
+
+    info.textContent =
+      countShown === 0 ? "Tidak ada santri ditemukan" : `Ditemukan ${countShown} santri`;
+  });
+  marks.innerHTML = "<mark>Daftar Santri</mark>"
+</script>
+</body>
+</html>

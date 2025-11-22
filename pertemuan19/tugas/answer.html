@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Jumlah latihan hari ini: <span id="count">0</span></p>
+<button id="btn-plus">Tambah Latihan</button>
+<p id="msg"></p>
+
+<script>
+  const countEl = document.getElementById("count");
+  const btn = document.getElementById("btn-plus");
+  const msg = document.getElementById("msg");
+  let count = 0;
+
+  btn.addEventListener("click", () => {
+    count++;
+    countEl.textContent = count;
+    if(count >= 30){
+        msg.style.color = "red"
+        msg.innerText = "Menyala abangku"
+    } else if(count >= 10){
+        msg.innerText = "Wih tetap semangat"
+    } else if (count >= 5){
+        msg.innerText = "Semangat"
+    }
+  });
+</script>
+</body>
+</html>

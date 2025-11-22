@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         .done {
+    text-decoration: line-through;
+    color: gray;
+  }
+    </style>
+</head>
+<body>
+    <h2>Todo List</h2>
+<input id="todo-input" placeholder="Tugas baru..." />
+<button id="todo-add">Tambah</button>
+<h3 id="jumlahtugas"></h3>
+<h5 id="selesaitugas"></h5>
+<ul id="todo-list"></ul>
+
+<script>
+  const input = document.getElementById("todo-input");
+  const addBtn = document.getElementById("todo-add");
+  const list = document.getElementById("todo-list");
+  let tugascount = 0
+  let selesaicount = 0
+
+  addBtn.addEventListener("click", () => {
+    tugascount++
+    const text = input.value.trim();
+    tugascounttrigert()
+    if (!text) return;
+    const li = document.createElement("li");
+    li.textContent = text;
+    li.addEventListener("click", () => {
+        selesaicount++
+      li.classList.toggle("done");
+      selsaicounttrigert()
+    });
+
+    const delBtn = document.createElement("button");
+    delBtn.textContent = "Hapus";
+    delBtn.addEventListener("click", (e) => {
+      e.stopPropagation();
+      li.remove();
+    });
+
+    li.appendChild(delBtn);
+    list.appendChild(li);
+    input.value = "";
+  });
+
+function tugascounttrigert(){
+    const tugas = document.getElementById("jumlahtugas")
+    tugas.innerText = `Jumlah Tugas : ${tugascount} `
+}
+function selsaicounttrigert(){
+    const selesai = document.getElementById("selesaitugas")
+    selesai.innerText = `jumlah tugas selesai ; ${selesaicount}`
+}
+</script>
+</body>
+</html>
