@@ -109,3 +109,63 @@ Bayangkan seperti blueprint rumah. atau intinya itu bisa membuat data yg sama dg
 = [.then] itu bisa di gabung di dalam [.then] maksudnya itu ada [.then] di dalam [.then]
 
 === day 5 ===
+
+=========================================================================================================
+
+=== day 2 ===
+
+- [document.getElementById()] = mengambil suatu element sesuai dengan idnya
+
+- [addEventListener()] = Menambahkan aksi handler pada elemen (bisa click, input, submit, dsb) 
+        terbagi jadi 3 type = 
+        - [click] = membuat dia menjalankan sesuaatu ketika di klick
+        - [keyup] = membuat dia menjalankan function ketika user mengetik
+        - ["keydown"] = Terjadi saat user mulai menekan tombol keyboard (sebelum dilepas).
+        - ["input"] = Terjadi setiap kali nilai input berubah, baik ketik, hapus, paste, atau auto-fill.
+        - ["change"] = Terjadi ketika input selesai berubah, lalu user berpindah fokus atau memilih option.
+        - ["mouseover"] = Terjadi ketika mouse masuk ke area elemen.
+        - ["submit"] = Terjadi ketika user mengirim form (tekan tombol submit atau Enter)
+
+- [createElement()] = membuat element baru di dlm html secara dinamis
+
+- [appendChild()] = memasukkan element baru di dlm dom dan hanya bisa menambahkan 1 node saja adapun yg bisa menambahkan banyak sekaligus
+
+- [.append()] = memasukkan element baru di dlm dom dan bisa menambahkan multiple node / string, bisa node atau text
+
+- [textContent] = men-set atau mengambil textnya saja (dia tidak perlu memproses HTML) dan dia tidak memerhatikan css visibility
+
+- [innerText] = Mirip textContent tapi memperhatikan style CSS dan visibility. (dia tidak perlu memproses HTML) dan dia menjadi memproses lebih lama karena hal tsb(css visibility  )
+
+- [classList.toggle()] = Menambah atau menghapus class CSS secara otomatis. dengan kondisi [(yangmauditambah),(kondisi)] dan sirkulasinya begini kalau ada class → hapus, kalau tidak ada → tambah.
+
+- [style.] = ini di gunakan untuk mengubah atau membuat css melalui js tempaltenya [(namaclassnya).style.(typestylenya)], Properti style JS memakai camelCase contoh [ V = backgroundColor, fontSize, X = background-color]
+
+- [remove()] = menghapus element dari dom
+
+- [stopPropagation()] = mencegah agar  [addEventListener()]  Mencegah aksi bubbling → mencegah aksi naik ke parent element.
+
+- [querySelectorAll("")] = dia mengambil semua element [class/id] yg cocok  dgn cssnya Menghasilkan NodeList (mirip array), tapi Harus pakai .forEach() untuk loop (karena bukan array asli)
+
+- [includes()] = dia di gunakan  Untuk mengecek apakah sebuah string mengandung kata. contoh Case sensitive → “A” ≠ “a”
+
+- [e.target] = untuk mengambil Elemen yang diklik user
+
+- [e.target.dataset.tab] = mengambil nilai atribut dari [data-tab]
+
+- [icon.textContent] = Mengubah icon ke suatu yg di inginkan khusus digunakan untuk mengganti tanda “+” / “–”
+
+- [innerHTML] =bisa membaca / menulis HTML   dia bisa menambahkan element2 html di dalamnya
+
+- [value] = di di gunakan untuk mengambil hasil input dari bagian html, value tidak bekerja pada elemen non-input.
+
+========= reminder ===========
+
+- [setAttribute()] = Mengubah/menambah attribute pada elemen.
+
+- [classList.add()/.remove()] = Untuk mengatur class tanpa toggle.
+
+- [parentNode/children] = Untuk mengakses elemen parent/child.
+            ada 3 jenis = 
+            - [parentElement] → khusus elemen (bukan node text)
+            - [children] → hanya element
+            - [childNodes] → termasuk text node
