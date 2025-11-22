@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="welcome-section">
+  <h1>Selamat Datang</h1>
+  <p class="description">Ini adalah paragraf pertama</p>
+  <p class="description">Ini adalah paragraf kedua</p>
+  <button id="action-button">Klik Saya</button>
+</div>
+
+<div class="card">Kartu 1</div>
+<div class="card">Kartu 2</div>
+<div class="card">Kartu 3</div>
+<script>
+    const allParagraphs = document.querySelectorAll(".description")
+    console.log(allParagraphs.length);
+    console.log(allParagraphs[0]);
+    console.log(allParagraphs[1]);
+    const allCards = document.querySelectorAll(".card")
+    console.log(allCards.length);
+
+// // const allParagraphs = // ← SELECT SEMUA .description
+
+// console.log(allParagraphs); 
+// console.log(allParagraphs.length); // Berapa jumlahnya? 2 paragraf
+
+// console.log(allParagraphs[0]); // Paragraf pertama
+// console.log(allParagraphs[1]); // ← FIX THIS: Paragraf kedua
+// console.log(allParagraphs[3]); // hasilnya undifine
+
+
+// const allCards = document.querySelectorAll('.card');
+//  console.log(allCards.length); //← UNCOMMENT & RUN
+// console.log(allCards[0]);
+// console.log(allCards[1]);
+// console.log(allCards[2]);
+
+</script>
+</body>
+</html>

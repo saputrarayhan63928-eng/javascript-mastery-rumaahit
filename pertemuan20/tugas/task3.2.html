@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .active { background: blue; color: white; }
+    .hidden { display: none; }
+    .highlight { background: yellow; }
+    .hidden{
+        display: none;
+    }
+    </style>
+</head>
+<body>
+<div id="box">Box Element</div>
+<button id="toggle-btn">infisible</button>
+<button id="toggle-btnpop">pop</button>
+<script>
+    const box1 = document.querySelector("#box")
+    const btn = document.querySelector("#toggle-btn")
+    const btn2 = document.querySelector("#toggle-btnpop")
+    btn.addEventListener('click', function(){
+        box1.classList.add('hidden')
+    })
+    btn2.addEventListener('click',function(){
+        box1.classList.remove('hidden')
+    })
+</script>
+</body>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+      <style>
+         .done {
+    text-decoration: line-through;
+    color: gray;
+  }
+    </style>
+</head>
+<body>
+    <div class="product-card" 
+     data-product-id="P001"
+     data-name="Laptop Gaming"
+     data-price="15000000"
+     data-stock="15"
+     data-category="electronics"
+     data-weight="2.5"
+     data-seller="TechStore"
+     data-discount="10">
+     
+    <h3>💻 Laptop Gaming</h3>
+    <p class="display-price">Rp 15.000.000</p>
+    <p class="display-stock">15 unit tersedia</p>
+    <div id="hasil"></div>
+    
+    <button onclick="addToCart(this)">Add to Cart</button>
+</div>
+
+<script>
+function addToCart(button) {
+    const productCard = button.parentElement;
+    const dataset = productCard.dataset;
+    
+    // Akses data terstruktur
+    const cartItem = {
+        id: dataset.productId,
+        name: dataset.name,
+        price: parseInt(dataset.price),
+        discount: parseInt(dataset.discount),
+        weight: parseFloat(dataset.weight),
+        seller: dataset.seller
+    };
+    
+    // Kalkulasi harga final
+    const finalPrice = cartItem.price * (1 - cartItem.discount / 100);
+    
+    // Update UI
+    updateCartUl(cartItem, finalPrice);
+}
+const harga = document.getElementById("hasil");
+
+function updateCartUl(a, b) {
+  let isi = "";
+
+  isi += `
+    <div>
+      <p>Discount Laptop : ${a.discount}%</p>
+      <p>Total : ${b}</p>
+      <p>Apakah anda yakin</p>
+      <button onclick="yes()">Yes</button>
+      <button onclick="no()">No</button>
+    </div>
+  `;
+
+  harga.innerHTML = isi;
+}
+
+function yes(){
+    alert ("Thank You For Buying")
+    harga.innerHTML = ""
+}
+function no(){
+    alert ("Thank You")
+    harga.innerHTML = ""
+}
+</script>
+</body>
+</html>

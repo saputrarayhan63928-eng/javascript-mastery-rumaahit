@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .active { background: blue; color: white; }
+    .hidden { display: none; }
+    .highlight { background: yellow; }
+    
+    </style>
+</head>
+<body>
+<div id="box">Box Element</div>
+<button id="toggle-btn">Toggle Visible</button>
+<script>
+    const box1 = document.querySelector("#box")
+    box1.style.backgroundColor = 'green'
+    box1.style.color = 'white'
+    box1.style.padding = '20px'
+    box1.style.borderRadius = '8px'
+    box1.style.fontSize = '18px'
+    box1.style.display = 'flex'
+    box1.style.justifyContent = 'center' 
+</script>
+</body>
+</html>

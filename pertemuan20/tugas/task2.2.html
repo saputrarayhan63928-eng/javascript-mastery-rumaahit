@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="message">Hello World</div>
+<p id="status">Status: Offline</p>
+<div id="content">
+  <h2>Heading</h2>
+  <p>Paragraph</p>
+</div>
+<script>
+  const garpconten = document.querySelector("#content")
+ garpconten.innerHTML =` <h2>Konten Baru</h2>
+  <p>Ini adalah konten yang diubah</p>
+<button>Tombol Baru</button>`
+//  alasan kenapa harus pakai backtick adalah Saat membuat HTML panjang di JS
+</script>
+</body>
+</html>

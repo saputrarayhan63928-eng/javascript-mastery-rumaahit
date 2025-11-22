@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="welcome-section">
+  <h1>Selamat Datang</h1>
+  <p class="description">Ini adalah paragraf pertama</p>
+  <p class="description">Ini adalah paragraf kedua</p>
+  <button id="action-button">Klik Saya</button>
+</div>
+
+<div class="card">Kartu 1</div>
+<div class="card">Kartu 2</div>
+<div class="card">Kartu 3</div>
+<script>
+    const welcomeSection = document.querySelector("#welcome-section")
+    console.log(welcomeSection)
+    const myButton = document.querySelector("#action-button")
+    console.log(myButton)
+</script>
+</body>
+</html>
+
+<!-- 
+// ❌ KODE INI BELUM SEMPURNA - COBA DIPERBAIKI!
+
+const welcomeSection = querySelector('welcome-section');
+console.log(welcomeSection);
+
+const myButton = document.querySelector('action-button');
+console.log(myButton); -->
+
+<!-- 1. yang salah dari querySelector pertama adalah kurangnya (document) dan # di bagian pemanggilannya
+ yg harusnya  const welcomeSection = document.querySelector("#welcome-section")
+ 2. simbol yg hilang dari kode ke 2 adalah # pada pemanggilan idnya
+ 3. const welcomeSection = document.querySelector("#welcome-section")
+    console.log(welcomeSection)
+    const myButton = document.querySelector("#action-button")
+    console.log(myButton)-->

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="welcome-section">
+  <h1>Selamat Datang</h1>
+  <p class="description">Ini adalah paragraf pertama</p>
+  <p class="description">Ini adalah paragraf kedua</p>
+  <button id="action-button">Klik Saya</button>
+</div>
+
+<div class="card">Kartu 1</div>
+<div class="card">Kartu 2</div>
+<div class="card">Kartu 3</div>
+<script>
+   const allcard = document.querySelectorAll(".card")
+   const allp = document.querySelectorAll(".description")
+   for(let i = 0; i < allcard.length; i++){
+    console.log(allcard[i]);
+   }
+   for(let i = 0; i < allp.length; i++){
+    console.log(allp[i]);
+   }
+   allcard.forEach((v)=>{
+    console.log(v);
+   })
+//   (v) dalam forEach adalah sebuah parameter yg bertujuan untuk melihatkan isi setiap value pada allcard
+</script>
+</body>
+</html>

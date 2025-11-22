@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="message">Hello World</div>
+<p id="status">Status: Offline</p>
+<div id="content">
+  <h2>Heading</h2>
+  <p>Paragraph</p>
+</div>
+<script>
+    const msg = document.querySelector("#message")
+    msg.textContent = `<em>Italic</em>` // ini hasilnya biasa aja
+    msg.innerHTML = `<em>Italic</em>` // ini hasilnya fontnya berubah menjadi italic
+    //  kalo cmn butuh text maka pakai textcontent
+    //  kalo butuh HTML maka pakai innerHTML
+</script>
+</body>
+</html>
