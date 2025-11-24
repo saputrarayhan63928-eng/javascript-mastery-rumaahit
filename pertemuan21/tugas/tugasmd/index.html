@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran</title>
+    <link rel="stylesheet" href="stayle.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Form Pendaftaran</h2>
+
+        <form id="myForm">
+            <label for="nama">Nama Lengkap</label>
+            <input type="text" id="nama" placeholder="Masukkan nama anda">
+            
+            <label for="email">Email</label>
+            <input type="email" id="emailInput" placeholder="Masukkan email" >
+            
+            <label for="password">Password</label>
+            <input type="password" id="passwordInput" placeholder="Masukkan password">
+
+            <label for="password">frerivikasi pasword</label>
+            <input type="password" id="confirmPasswordInput" placeholder="Konfirmasi Password">
+
+             <label for="password">No HP</label>
+            <input type="text" id="phoneInput" placeholder="Masukkan number">
+
+              <label>Masukkan URL:</label>
+             <input type="text" id="urlInput" placeholder="https://contoh.com">
+
+               <select id="dropdownInput">
+                 <option value="">-- Pilih salah satu --</option>
+                 <option value="makanan">Laki Laki</option>
+                 <option value="minuman">Perempuan</option>
+              </select>
+
+            <label for="laki">Syarat dan ketentuan</label>
+            <input type="checkbox" id="syarat" name="gender" value="syarat">
+
+            <label for="tanggal">Input Tanggal</label>
+            <input type="date" id="dateInput">
+
+            <p id="msg-nama"></p>
+
+            <button type="submit" id="inputtrigert">Daftar</button>
+        </form>
+    </div>
+<script src="js21.js"></script>
+</body>
+</html>
