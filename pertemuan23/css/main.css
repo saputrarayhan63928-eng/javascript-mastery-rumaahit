@@ -1,0 +1,152 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", Arial, sans-serif;
+}
+body{
+  height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #1e3a8a 60%);
+  color: white;
+}
+nav ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 15px;
+    align-items: center;
+    background: black;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: wheat;
+}
+
+/* ⬇ pindahkan item ini ke kanan */
+nav ul li.right {
+    margin-left: auto;
+}
+header{
+background: gray;
+ display: flex;
+justify-content: center ;
+padding: 10px;
+margin: 20px;
+border-radius: 30px;
+}
+main{
+    display: flex;
+    justify-content: center;
+}
+ .input{
+  background: rgba(255,255,255,0.06);
+  padding: 32px;
+  width: 330px;
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+  animation: fadeIn .4s ease-out;
+}
+
+/* Animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Title */
+h1 {
+  text-align: center;
+  margin-bottom: 12px;
+  font-size: 1.8rem;
+}
+
+/* Signup text */
+p {
+  text-align: center;
+  margin-bottom: 22px;
+  font-size: 0.9rem;
+  color: #cbd5e1;
+}
+
+p a {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+label {
+  font-size: 0.9rem;
+  color: #d7e1f5;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 12px;
+  margin: 6px 0 18px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 10px;
+  color: white;
+  outline: none;
+  transition: border .2s ease;
+}
+
+input:focus {
+  border-color: #38bdf8;
+}
+.input button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+  color: #032436;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+#display  {
+  background: rgba(255,255,255,0.06);
+  padding: 32px;
+  margin: 40px;
+  width: 330px;
+  border-radius: 16px;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.35);
+  animation: fadeIn .4s ease-out;
+}
+#display button{
+      width: 10%;
+  padding: 3px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+  color: #032436;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+footer{
+    background: black;
+    color: wheat;
+    margin-top: 30px;
+    padding: 40px;
+}
+footer h3{
+    display: flex;
+    justify-content: center;
+}
+ .done {
+    text-decoration: line-through;
+    color: gray;
+  }

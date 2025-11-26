@@ -1,0 +1,71 @@
+body{
+    background-color: #265AB1;
+}
+/* Wrapper untuk menaruh welcome + button sejajar */
+.welcome-wrapper {
+  max-width: 1100px;
+  margin: 70px auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  padding: 0 20px;
+}
+
+/* Box welcome */
+.welcome-container {
+  flex: 2;
+}
+
+.welcome-text {
+  padding: 32px;
+  border-radius: 16px;
+  background: #58B7E7;
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 8px 26px rgba(0,0,0,0.35);
+  color: white;
+}
+
+/* Text styling */
+.welcome-text h3 {
+  color: #cbd5e1;
+  margin-bottom: 12px;
+}
+
+.welcome-text h1 {
+  margin-bottom: 16px;
+  font-size: 2rem;
+}
+
+.welcome-text p {
+  color: #d7e2f2;
+}
+
+/* Button container */
+#btndiv {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+/* Button style */
+.btn {
+  display: block;
+  padding: 12px;
+  background: linear-gradient(90deg, #38bdf8, #0ea5e9);
+  color: #032436;
+  text-align: center;
+  font-weight: 700;
+  border-radius: 12px;
+  text-decoration: none;
+  transition: 0.15s ease;
+  margin-bottom: 10px;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(56,189,248,0.3);
+}
+
