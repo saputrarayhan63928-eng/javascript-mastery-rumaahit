@@ -1,5 +1,9 @@
    const btnCash = document.getElementById("btnCash");
     const btnTf = document.getElementById("btnTransfer");
+
+
+   let barangproduktotal = []
+
     
     // fungsi untuk reset active
     function clearActive() {
@@ -79,6 +83,8 @@ function tampilkanProduk(barang){
         isi += `<button class="a"> - </button>`;
         isi += `<button onclick="tambahKeranjang('${barang[c].id}')" class="a"> + </button>`;
         isi += `</div>`;
+
+        barangproduktotal.push(barang[c])
     }
     displayproduk.innerHTML = isi;
 }
@@ -135,71 +141,3 @@ btninputbarang.addEventListener('click',function(e){
 })
 
 // total harga produk
-const totalhargaproduk = document.getElementById("totalhargaproduk")
-const tambahproduk = document.getElementById("tambah" )
-const pesanbelanja = document.getElementById("pesan")
-const totalharagabelanja = document.getElementById("harga")
-
-const belanjatotal = []
-
-function hitungTotal() {
-    let total = 0;
-    for (let i = 0; i < belanjatotal.length; i++) {
-        total += belanjatotal[i].harga * belanjatotal[i].jumlah;
-    }
-    return total;
-}
-
-
-
-
-function tampilkanKeranjang() {
-    if (belanjatotal.length === 0) {
-        pesanbelanja.innerHTML = "<p>Keranjang masih kosong.</p>";
-        totalharagabelanja.innerText = "Total: Rp 0";
-        return;
-    }
-    let isi = "";
-    for (let i = 0; i < belanjatotal.length; i++) {
-        const item = belanjatotal[i];
-        const subtotal = item.harga * item.jumlah;
-
-        isi += `<div class="item-keranjang">`;
-        isi += `<strong>${item.nama}</strong>`;
-        isi += `<span>Jumlah: ${item.jumlah} x Rp ${formatRupiah(item.harga)}</span>`;
-        isi += `<p>Subtotal: Rp ${formatRupiah(subtotal)}</p>`;
-        isi += `<div class="kontrol">`;
-        isi += `<button class="button-kontrol" onclick="ubahJumlah('${item.id}', 'tambah')">+</button>`;
-        isi += `<button class="button-kontrol" onclick="ubahJumlah('${item.id}', 'kurang')">-</button>`;
-        isi += `</div></div>`;
-    }
-
-
-    pesanbelanja.innerHTML = isi;
-
-    const total = hitungTotal();
-    totalharagabelanja.innerText = "Total: Rp " + formatRupiah(total);
-}
-
-function tambahKeranjang(idProduk) {
-    let ditemukan = false;
-    for (let i = 0; i < belanjatotal.length; i++) {
-        if (belanjatotal[i].id === idProduk) {
-            belanjatotal[i].jumlah += 1;
-            ditemukan = true;
-        }
-    }
-    if (!ditemukan) {
-        for (let j = 0; j < dataproduk.length; j++) {
-            if (dataproduk[j].id === idProduk) {
-                belanjatotal.push({
-                    id: dataproduk[j].id,
-                    nama: dataproduk[j].nama,
-                    harga: dataproduk[j].price,
-                    jumlah: 1
-                });
-            }
-        }
-    }
-    tampilkanKeranjang();
-}
